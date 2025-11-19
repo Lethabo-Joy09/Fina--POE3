@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Cotton Killa - South African streetwear brand founded in 2020. Meet our team and discover our mission to empower youth through fashion.">
+  <meta name="keywords" content="cotton killa team, about us, south african fashion brand, streetwear company">
+  <title>About Us | Cotton Killa</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Cotton Killa</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="products.html">Products</a>
+      <a href="enquiry.html">Enquiry</a>
+      <a href="contact.html">Contact</a>
+      <div class="cart-icon" id="cartIcon">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- NOTIFICATION POPUP -->
+  <div class="notification" id="notification"></div>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-content">
+      <span class="lightbox-close" id="lightboxClose">&times;</span>
+      <img src="" alt="Enlarged view" id="lightboxImage">
+    </div>
+  </div>
+
+  <!-- CART MODAL -->
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-header">
+      <h2>Shopping Cart</h2>
+      <span class="cart-close" id="cartClose">&times;</span>
+    </div>
+    <div class="cart-items-container" id="cartItemsContainer">
+      <p style="text-align: center; padding: 40px; color: #999;">Your cart is empty</p>
+    </div>
+    <div class="cart-total" id="cartTotal" style="display: none;">
+      <h3>Total: <span id="cartTotalAmount">R0</span></h3>
+      <button class="checkout-btn-cart" id="checkoutBtn">Proceed to Checkout</button>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="checkout-modal" id="checkoutModal">
+    <div class="checkout-content">
+      <h2>Checkout</h2>
+      <form id="checkoutForm">
+        <div class="form-group">
+          <label for="checkout-name">Full Name *</label>
+          <input type="text" id="checkout-name" required>
+        </div>
+        <div class="form-group">
+          <label for="checkout-email">Email *</label>
+          <input type="email" id="checkout-email" required>
+        </div>
+        <div class="form-group">
+          <label for="checkout-phone">Phone Number *</label>
+          <input type="tel" id="checkout-phone" required>
+        </div>
+        <div class="form-group">
+          <label for="checkout-address">Delivery Address *</label>
+          <input type="text" id="checkout-address" required>
+        </div>
+        <div class="form-group">
+          <label for="checkout-card">Card Number *</label>
+          <input type="text" id="checkout-card" placeholder="1234 5678 9012 3456" required>
+        </div>
+        <div class="form-group">
+          <label for="checkout-expiry">Expiry Date *</label>
+          <input type="text" id="checkout-expiry" placeholder="MM/YY" required>
+        </div>
+        <div class="form-group">
+          <label for="checkout-cvv">CVV *</label>
+          <input type="text" id="checkout-cvv" placeholder="123" required>
+        </div>
+        <h3 style="margin: 20px 0;">Order Summary</h3>
+        <div id="checkoutSummary"></div>
+        <h3 style="margin: 20px 0;">Total: <span id="checkoutTotal">R0</span></h3>
+        <button type="submit" class="submit-btn">Complete Payment</button>
+        <button type="button" class="submit-btn" style="background: #666; margin-top: 10px;" onclick="closeCheckout()">Cancel</button>
+      </form>
+    </div>
+  </div>
+
+  <main>
+    <section class="about-hero">
+      <h1>About Cotton Killa</h1>
+      <p>Where Streetwear Meets South African Culture</p>
+    </section>
+
+    <section class="about-story">
+      <h2>Our Story</h2>
+      <p>
+        Cotton Killa is a South African urban fashion brand built on style, comfort, and culture. 
+        Founded in Johannesburg in 2020, we create clothing that connects streetwear with premium quality. 
+        Our mission is to empower young people with fashion that represents confidence, identity, and community.
+      </p>
+    </section>
+
+    <section class="mission-vision">
+      <div class="mv-container">
+        <div class="mission">
+          <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+          <p>To create premium streetwear that celebrates South African youth culture while providing affordable, high-quality fashion that empowers self-expression and confidence.</p>
+        </div>
+        <div class="vision">
+          <h3><i class="fas fa-eye"></i> Our Vision</h3>
+          <p>To become the leading streetwear brand in Africa, known for authentic designs that bridge urban fashion with African heritage and craftsmanship.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="team">
+      <h2>Meet the Team</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="./assets/Thabo.jpg" alt="Thabo Mokoena - Founder" class="lightbox-trigger">
+          <h3>Thabo Mokoena</h3>
+          <p>Founder & Creative Director</p>
+        </div>
+
+        <div class="team-member">
+          <img src="./assets/Lerato.jpg" alt="Lerato Dlamini - Lead Designer" class="lightbox-trigger">
+          <h3>Lerato Dlamini</h3>
+          <p>Lead Designer</p>
+        </div>
+
+        <div class="team-member">
+          <img src="./assets/Jason.jpg" alt="Jason Naidoo - Marketing Manager" class="lightbox-trigger">
+          <h3>Jason Naidoo</h3>
+          <p>Marketing & Brand Manager</p>
+        </div>
+
+        <div class="team-member">
+          <img src="./assets/Nomvula.jpg" alt="Nomvula Khumalo - Operations Manager" class="lightbox-trigger">
+          <h3>Nomvula Khumalo</h3>
+          <p>Operations & Logistics</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="social-media">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-info">
+        <p>&copy; 2025 Cotton Killa. All rights reserved.</p>
+        <p>Premium Streetwear | Made in South Africa</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
